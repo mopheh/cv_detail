@@ -316,7 +316,7 @@ h3 {
     height: fit-content !important;
   }
   .intel ul {
-    padding-left: 10px;
+    padding-left: 20px;
   }
   .social-icons.mt-5 {
     margin-top: 2rem !important;
@@ -329,6 +329,14 @@ h3 {
   }
   .contact .px-5 {
     padding: 0 !important;
+  }
+}
+@media (max-width: 400px) {
+  .ml-6 {
+    margin-left: 1.5rem !important;
+  }
+  .intel ul {
+    padding-left: 5px;
   }
 }
 strong,
