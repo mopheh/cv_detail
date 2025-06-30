@@ -281,6 +281,9 @@ h3 {
   .ml-6 {
     margin-left: 3.5rem;
   }
+  .cont {
+    display: contents;
+  }
   .smstack {
     margin-left: auto;
   }
