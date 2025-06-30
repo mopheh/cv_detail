@@ -1,0 +1,475 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", "Ubuntu", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+h1,
+h2,
+h3 {
+  letter-spacing: 0.2px;
+}
+h2 {
+  text-transform: uppercase;
+  font-family: "Open Sans", "Cairo";
+}
+.info h3 {
+  text-transform: uppercase;
+  font-family: "Karla", "Josefin Sans";
+  font-weight: 500;
+}
+.lh-1 {
+  line-height: 1.8;
+}
+.head {
+  font-family: "Cabin";
+  color: #803835 !important;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.head::after {
+  content: " />";
+}
+.head::before {
+  content: "< ";
+}
+.head::after,
+.head::before {
+  font-size: 1.3rem;
+  font-family: "Cabin", "Poppins", "Open Sans";
+  animation: fadeInOut 5s infinite;
+}
+.pic-container {
+  border-radius: 50%;
+  border: 3px solid #803835;
+  width: 300px;
+  height: 300px;
+  padding: 8px;
+  margin: 0 auto;
+}
+.my-img {
+  background-image: url("./images/my_pic.jpg");
+  background-position: top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner {
+  background: linear-gradient(-45deg, #f1f0f0, #dfdede, #f8e8f8, #f1f2f3);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.text-blockUI {
+  position: relative;
+  -webkit-animation: fadeInOut 4s infinite;
+  color: #000;
+  animation: fadeInOut 4s infinite;
+}
+
+.text-blockUI-2 {
+  opacity: 0;
+  position: relative;
+  left: -130px;
+  -webkit-animation: fadeInOut 4s 2s infinite;
+  animation: fadeInOut 4s 2s infinite;
+  color: #000;
+}
+
+@-webkit-keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    top: -0.5em;
+  }
+  25% {
+    opacity: 1;
+    top: 0;
+  }
+  75% {
+    opacity: 0;
+    top: 0.5em;
+  }
+  100% {
+    opacity: 0;
+    top: 0.5em;
+  }
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    top: -0.5em;
+  }
+  25% {
+    opacity: 1;
+    top: 0;
+  }
+  75% {
+    opacity: 0;
+    top: 0.5em;
+  }
+  100% {
+    opacity: 0;
+    top: 0.5em;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+h3 {
+  letter-spacing: 0.1px;
+  margin-top: 1rem;
+}
+
+/* ABOUT STYLES */
+
+.title {
+  font-family: "Josefin Sans", "Cabin", "Cairo";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1px;
+}
+.stack,
+.about,
+.projects {
+  font-family: "Poppins", "Cabin", sans-serif !important;
+  font-size: 0.975rem;
+  letter-spacing: 0.1px;
+}
+.about-pic {
+  border-radius: 12px;
+  width: 200px;
+  height: 200px;
+
+  background-position: top;
+  background-size: cover;
+  border: 10px solid white;
+}
+.about-pic-1 {
+  background-image: url("./images/f5yybo.jpg");
+}
+.about-pic-2 {
+  background-image: url("./images/jare.jpg");
+  top: -25%;
+  left: -5%;
+}
+.about-pic-4 {
+  right: 20%;
+  background-image: url("./images/mofe.jpg");
+  top: 5%;
+}
+.about-pic-3 {
+  background-image: url("./images/team.jpg");
+  bottom: 0;
+  right: 50%;
+}
+.resume-text .title {
+  font-family: "Karla";
+}
+.icon {
+  color: #dfdede;
+  font-size: 18px;
+  border-radius: 50px;
+  background-color: #803835;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  padding: 0.75% 1.2%;
+}
+.award {
+  padding: 0.75% 1.57% !important;
+}
+@media (max-width: 930px) {
+  .about {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .about-pic-1,
+  .about-pic-2,
+  .about-pic-3,
+  .about-pic-4 {
+    position: relative !important;
+    top: 0;
+    right: inherit;
+    left: inherit;
+    bottom: inherit;
+  }
+  .img-box {
+    margin: 0;
+    justify-content: center;
+  }
+  .service-box {
+    height: fit-content;
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .about-pic-1,
+  .about-pic-2,
+  .about-pic-3,
+  .about-pic-4 {
+    position: relative !important;
+    top: 0;
+    right: inherit;
+    left: inherit;
+    bottom: inherit;
+  }
+  .img-box {
+    margin: 0;
+    justify-content: center;
+  }
+  .service-box {
+    height: fit-content;
+  }
+  .typewriter-body {
+    right: 5%;
+    width: 30%;
+  }
+  .ml-6 {
+    margin-left: 4.5rem;
+  }
+  .smstack {
+    margin-left: auto;
+  }
+  .stack .text-right {
+    text-align: left !important;
+  }
+  .stack .row {
+    flex-direction: column-reverse;
+    padding: 0 8%;
+  }
+  .certification .p-2 {
+    padding: 4rem !important;
+  }
+  .icon {
+    padding: 1.5% 2.5% !important;
+    top: -3% !important;
+    left: -10% !important;
+  }
+  .award {
+    padding: 1.5% 3.5% !important;
+  }
+  .projects {
+    padding: 0 8%;
+  }
+  .intel.p-5 {
+    padding: 1.5rem !important;
+  }
+  .follow-up-box {
+    padding: 8% !important;
+    height: fit-content !important;
+  }
+  .intel ul {
+    padding-left: 25px;
+  }
+  .social-icons.mt-5 {
+    margin-top: 2rem !important;
+  }
+  .contact {
+    padding: 1.5rem 12% !important;
+  }
+  .contact h5 {
+    text-align: left !important;
+  }
+  .contact .px-5 {
+    padding: 0 !important;
+  }
+}
+strong,
+.about span,
+.projects span {
+  color: #803835;
+}
+.about-info span {
+  color: #535455;
+  font-size: 0.9rem;
+}
+.progress-head {
+  font-family: "Karla", "Cabin", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.service i {
+  color: #803835;
+  font-size: 2.3em;
+}
+.service h4 {
+  font-family: "Cabin";
+  letter-spacing: 0.1px;
+  font-size: 1rem;
+}
+.service p {
+  font-size: 0.75rem;
+}
+/*STACK*/
+.stack {
+  background-color: #f7f7f7;
+}
+.tool {
+  text-align: center;
+}
+.high i {
+  font-size: 1.8rem;
+  color: #803835;
+}
+.css-15x4w2i-JoyCircularProgress-root {
+  font-family: "Karla", "Josefin Sans", sans-serif !important;
+}
+.tool span {
+  font-size: 0.78rem;
+}
+.tool h6 {
+  font-family: "Cabin", "Karla";
+  letter-spacing: 0.1px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+.high {
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.tool-stack {
+  border-right: 2px dashed #fff;
+}
+.z-4 {
+  z-index: 4;
+}
+.education .resume-text {
+  letter-spacing: normal;
+}
+.education .duration {
+  background-color: #80373515;
+  color: #803835;
+  width: fit-content;
+  border-radius: 12px;
+  font-weight: 500;
+  font-family: "Cabin", sans-serif;
+  font-size: 13px;
+  letter-spacing: normal;
+  padding: 5px 10px;
+}
+.fw-500 {
+  font-weight: 500;
+}
+
+.portfolio-text {
+  font-size: 1.1rem;
+  font-family: "Cabin", "Karla", sans-serif;
+  margin: 10px 0 5px 0;
+}
+.tech {
+  font-weight: 300;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+}
+.projects img {
+  transition: all ease-in-out 0.8s;
+}
+
+.projects img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all ease-in-out 0.8s;
+}
+.progress-ring {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.progress-ring svg {
+  transform: rotate(-90deg);
+}
+
+.progress-ring circle {
+  fill: none;
+  stroke-width: 4;
+  r: 45;
+  cx: 50;
+  cy: 50;
+}
+
+.progress-bg {
+  stroke: #d6f5d6;
+}
+
+.progress-value {
+  stroke: darkgreen;
+  stroke-linecap: round;
+  stroke-dasharray: 282.74;
+  stroke-dashoffset: calc(282.74 - (var(--percent) * 2.8274));
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  font-family: "Cairo", "Cabin";
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: darkgreen;
+}

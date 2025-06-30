@@ -1,0 +1,489 @@
+#root {
+  overflow-x: hidden;
+}
+
+.cta,
+.button {
+  font-family: "Josefin Sans" !important;
+}
+.typewriter-body h6 {
+  letter-spacing: 0.1px;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+/* Typewriter effect 1 */
+@keyframes typing {
+  0.0000%,
+  27.3488% {
+    content: "";
+  }
+  1.1395%,
+  26.2093% {
+    content: "d";
+  }
+  2.2791%,
+  25.0698% {
+    content: "de";
+  }
+  3.4186%,
+  23.9302% {
+    content: "dev";
+  }
+  4.5581%,
+  22.7907% {
+    content: "deve";
+  }
+  5.6977%,
+  21.6512% {
+    content: "devel";
+  }
+  6.8372%,
+  20.5116% {
+    content: "develo";
+  }
+  7.9767%,
+  19.3721% {
+    content: "develop";
+  }
+  9.1163%,
+  18.2326% {
+    content: "develop.";
+  }
+  /* 10.2558%,
+  17.0930% {
+    content: "developer";
+  } */
+
+  30.7674%,
+  51.2791% {
+    content: "";
+  }
+  31.9070%,
+  50.1395% {
+    content: "s";
+  }
+  33.0465%,
+  49.0000% {
+    content: "so";
+  }
+  34.1860%,
+  47.8605% {
+    content: "sol";
+  }
+  35.3256%,
+  46.7209% {
+    content: "solv";
+  }
+  36.4651%,
+  45.5814% {
+    content: "solve";
+  }
+  37.6047%,
+  44.4419% {
+    content: "solve.";
+  }
+
+  54.6977%,
+  75.2093% {
+    content: "";
+  }
+  55.8372%,
+  74.0698% {
+    content: "d";
+  }
+  56.9767%,
+  72.9302% {
+    content: "de";
+  }
+  58.1163%,
+  71.7907% {
+    content: "des";
+  }
+  59.2558%,
+  70.6512% {
+    content: "desi";
+  }
+  60.3953%,
+  69.5116% {
+    content: "desig";
+  }
+  61.5349%,
+  68.3721% {
+    content: "design.";
+  }
+
+  78.6279%,
+  96.8605% {
+    content: "";
+  }
+  79.7674%,
+  95.7209% {
+    content: "b";
+  }
+  80.9070%,
+  94.5814% {
+    content: "bu";
+  }
+  82.0465%,
+  93.4419% {
+    content: "bui";
+  }
+  83.1860%,
+  92.3023% {
+    content: "buil";
+  }
+  84.3256%,
+  91.1628% {
+    content: "build.";
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+
+  @keyframes sequencePopup {
+    0%,
+    100% {
+      content: "develop.";
+    }
+    25% {
+      content: "solve.";
+    }
+    50% {
+      content: "design.";
+    }
+    75% {
+      content: "build.";
+    }
+  }
+
+  .typewriter::before {
+    content: "develop";
+    animation: sequencePopup 12s linear infinite;
+  }
+}
+
+/**/
+.cta {
+  border: none;
+  background: none;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.typewriter-body {
+  height: 50px;
+  font-size: 1rem;
+  font-family: "Karla", "Cabin";
+  width: 20%;
+  position: absolute;
+  top: 10%;
+  right: 22%;
+  z-index: 2;
+  padding: 12px;
+  background-color: #fff;
+}
+.ml-6 {
+  margin-left: 7.5rem;
+}
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #919191;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+  color: black;
+  z-index: 1;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #39bda7;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:hover {
+  color: #ffffff;
+  border: 1px solid #39bda7;
+}
+
+.button:hover:before {
+  top: -35%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button:hover:after {
+  top: -45%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+.hook {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  z-index: -1;
+  bottom: -6px;
+  transform: rotate(46deg);
+}
+.info h3 {
+  color: #2f4858;
+}
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 100%;
+  animation: typingg 2s steps(22), blink 0.5s step-end infinite alternate;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+@keyframes typingg {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.underlay,
+.underlay-right {
+  font-size: 10em;
+  color: #8037350c;
+  font-family: "Poppins";
+  left: -16rem;
+  top: 5rem;
+}
+
+.underlay-right h1 {
+  font-size: 1em;
+  color: #8037350c;
+  font-family: "Poppins";
+  display: flex;
+}
+.z-10 {
+  z-index: 10;
+}
+.underlay-right {
+  left: 7.2em;
+  top: 1rem;
+}
+.follow-up-box {
+  height: 450px;
+  width: 55%;
+  padding: 3rem;
+  background-color: #f7f7f7;
+}
+.contact {
+  height: 450px;
+  width: 45%;
+  padding: 1.5rem 3rem;
+}
+@media (max-width: 768px) {
+  .follow-up-box,
+  .contact {
+    width: 100%;
+  }
+}
+.service-box {
+  height: 350px;
+  width: 100%;
+  padding: 3rem;
+  background-color: #f7f7f7;
+}
+.intel ul {
+  list-style-type: none;
+}
+.intel li {
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.1px;
+}
+.intel strong {
+  font-family: "Open Sans";
+}
+.follow {
+  font-family: "Open Sans";
+  letter-spacing: 1.3px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.intel a:hover {
+  text-decoration: none;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 50%;
+  margin-right: 5px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+@keyframes blurHover {
+  50% {
+    transform: scale(1.05);
+  }
+}
+.navbar-light .navbar-nav .nav-link {
+  letter-spacing: 0.1px;
+}
+a:hover {
+  text-decoration: none;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  transition: all 0.5s ease-in-out;
+  animation: blurHover 1s linear;
+}
+.spin {
+  color: #8037350c;
+  font-size: 10em;
+  top: -5rem;
+  left: -18rem;
+}
+.spin-2 {
+  color: #8037350c;
+  font-size: 10em;
+  bottom: -5rem;
+  right: -18rem;
+}
+.foot-icon {
+  color: #414141;
+}
+.foot-label {
+  font-size: 0.8rem;
+  margin-bottom: -7px !important;
+  font-family: "Josefin Sans";
+  color: #803735;
+  font-weight: 500;
+}
+.contact h5 {
+  font-family: "Karla", sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 1.3px;
+}
+.form-control,
+.form-control:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: inherit;
+  border-bottom: 1.8px solid #803835;
+}
+.is-textarea {
+  border: 1px solid #803835 !important;
+  padding: 1.05rem 1rem;
+}
